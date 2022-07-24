@@ -24,6 +24,7 @@ mysqlclient==2.1.0
 nest-asyncio==1.5.5
 packaging==21.3
 parso==0.8.3
+opencv-python
 pickleshare==0.7.5
 platformdirs==2.5.2
 prompt-toolkit==3.0.29
@@ -31,6 +32,7 @@ psutil==5.9.0
 pure-eval==0.2.2
 Pygments==2.12.0
 pyparsing==3.0.8
+pillow
 python-dateutil==2.8.2
 pywin32==303
 pyzmq==22.3.0

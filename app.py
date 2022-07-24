@@ -51,7 +51,12 @@ def registarArchivo():
             file.save(upload_path)
             
             return '<br><br><center>El archivo se ha cargado correctamente &#x270c;&#xfe0f; </center>'
+            #return render_template('screen_print.html')        
         return render_template('index.html')
+
+@app.route('/screen_print')
+def screen_print():
+    return render_template('screen_print.html')        
     
 
 if __name__ == '__main__':
