@@ -10,6 +10,17 @@ import os
 #    sys.exit(1)
 
 #mg.show()
+def get_size(path):
+    img = Image.open(path)
+    ancho,alto = img.size
+    return(ancho,alto)
+
+def format():
+    pass
+
+def size_kb():
+    #TODO : implement size kb
+    pass
 
 #Calcular resolucion de la imagen
 #ancho,alto = img.size

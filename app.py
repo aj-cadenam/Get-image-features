@@ -8,6 +8,7 @@ from random import sample
 from werkzeug.utils import secure_filename 
 import os
 
+from common.caracteristicas import get_size
 
 #Declarando nombre de la aplicación e inicializando
 app = Flask(__name__)
@@ -47,16 +48,22 @@ def registarArchivo():
             extension           = os.path.splitext(filename)[1]
             nuevoNombreFile     = stringAleatorio() + extension
      
-            upload_path = os.path.join (basepath, 'static/archivos', nuevoNombreFile) 
+            upload_path = os.path.join (basepath, 'static',nuevoNombreFile) 
             file.save(upload_path)
+
+            alto, ancho = get_size(upload_path)
+            print(alto,ancho)
             
-            return '<br><br><center>El archivo se ha cargado correctamente &#x270c;&#xfe0f; </center>'
-            #return render_template('screen_print.html')        
-        return render_template('index.html')
+            #return '<br><br><center>El archivo se ha cargado correctamente &#x270c;&#xfe0f; </center>'
+            
+            return render_template('screen_print.html', nuevoNombreFile =  nuevoNombreFile, img_alto = alto, img_ancho = ancho )        
+        return render_template('index.html') 
 
 @app.route('/screen_print')
 def screen_print():
-    return render_template('screen_print.html')        
+    
+    file='M1A2KYO3S9LUBRWVXZ8H.jpg'
+    return render_template('screen_print.html', nuevoNombreFile = file)        
     
 
 if __name__ == '__main__':

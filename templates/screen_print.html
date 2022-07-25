@@ -9,14 +9,16 @@
 
     <div>
 
-        <img src="static/archivos/YI_LX8H3VG4FAOZBNW0J.jpg/{{basepath}}" width="200" height="200" alt="NO SE ENCONTRO LA IMAGEN">
-
+        <!--<img src="static/archivos/YI_LX8H3VG4FAOZBNW0J.jpg/{{basepath}}" width="200" height="200" alt="NO SE ENCONTRO LA IMAGEN">
+        --->
+        <img src="{{url_for('static', filename= nuevoNombreFile)}}" alt="NO SE ENCONTRO LA IMAGEN">
     </div>
 
 </head>
 
 <body>
     <h1>Imagen seleccionada</h1>
+    <div>El ancho es: {{img_ancho}} , el alto es: {{img_alto}} </div>
 </body>
 
 </html>
