@@ -1,18 +1,13 @@
-Reto práctico:
+CONSTRUCCIÓN:
 
-Desarrollar una aplicación Web utilizando librerías y frameworks que necesite de
-HTML, CSS, JavaScript, que cumpla con las siguientes funciones:
+ -Esta app web se desarrollo con python como lenguaje para backend con su framework FLASK utilizando el motor
+ de plantillas Jinja2 para generar documentos html.
 
--Que permita el cargue de una imagen (formato jpg, jpeg y/o png)
+-Por otra parte para la creacion del frontend de la pagina web se utilizo Material desing para CSS y JavaScript.
 
--Una vez cargada, debe permitir su visualización
+FUNCIONAMIENTO:
 
--Debe listar las características generales de la imagen, como mínimo, resolución,
-formato, tamaño en Kb.
+-Para ejecutar la aplicación web se debe instalar el archivo requeriments.txt con pip en un entorno virtual
+ posteriormente se debe correr el archivo app.py y abrir en el browser el localhost en el puerto 5000, dar click
+ en el el icono de adjuntar y oprimir el boton cargar archivo para ver la imagen cargada y sus respectivas características.
 
-Al dar clic sobre algún punto de la imagen visualizada en la aplicación Web, debe
-presentar la siguiente información:
-
-• Coordenas del pixel seleccionado
-• Color en formato Hexagesimal (EJ. #62ACB7)
-• Color en formato RGB (EJ. 98, 172, 183)
